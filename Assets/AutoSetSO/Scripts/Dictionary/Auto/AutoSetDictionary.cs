@@ -23,7 +23,7 @@ namespace AutoSet
         /// <param name="values">辞書の値に登録するデータ</param>
         public void SetData(TValue[] values)
         {
-            _datas = new Data[values.Length];
+            _Datas = new Data[values.Length];
             int validEnumLength = Enum.GetValues(typeof(TKey)).Length-1;
             var usedKeys = new HashSet<TKey>();
             
@@ -49,7 +49,7 @@ namespace AutoSet
         
         protected virtual void AddData(int index, TKey key, TValue value)
         {
-            _datas[index] = new Data(key, value);
+            _Datas[index] = new Data(key, value);
         }
     }
 }
