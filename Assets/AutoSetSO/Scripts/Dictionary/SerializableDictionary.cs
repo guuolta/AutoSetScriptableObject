@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace AutoSet
 {
@@ -12,8 +13,8 @@ namespace AutoSet
     [Serializable]
     public class SerializableDictionary<TKey, TValue>
     {
-        [SerializeField]
-        protected Data[] _datas;
+        [FormerlySerializedAs("_datas")] [SerializeField]
+        protected Data[] _Datas;
     
         private Dictionary<TKey, TValue> _dataDic = null;
         public Dictionary<TKey, TValue> DataDic
@@ -35,7 +36,7 @@ namespace AutoSet
         {
             _dataDic = new();
     
-            foreach (var data in _datas)
+            foreach (var data in _Datas)
             {
                 var key = data.Key;
     
