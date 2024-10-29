@@ -13,7 +13,7 @@ namespace AutoSet
         private string _folderPath = "Assets/";
         public string FolderPath => _folderPath;
         [Header("Enumファイルを保存するフォルダのパス(最後の/は不要)"), SerializeField]
-        private string _enumPath = "Assets/0_Coading/";
+        private string _enumPath = "Assets/";
         public string ENUM_PATH => _enumPath;
         
         [Header("Enumの名前空間(絶対に何か入力する)"), SerializeField]
